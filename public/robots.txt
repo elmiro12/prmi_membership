@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://membership.madridambon.my.id/sitemap.xml

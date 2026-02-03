@@ -1,0 +1,87 @@
+.nav-link[data-bs-toggle=collapse]::after {
+  display: none !important;
+}
+
+.toggle-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.bg-white-50 {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(4px);
+  /* efek blur */
+  -webkit-backdrop-filter: blur(4px);
+  /* Safari support */
+}
+
+.bg-white-no-blur {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  background-color: #5507ff !important;
+  color: #ffffff !important;
+  border-radius: 0.375rem;
+  transition: 0.2s ease-in-out;
+}
+
+.fixed-bg-layer {
+  background: url('/uploads/webbg/bg_web.png') no-repeat center center;
+  background-size: cover;
+}
+
+#sideNavbar a.nav-link.active {
+  color: #fff !important;
+  /* teks putih */
+  background-color: #624BFF !important;
+  /* biru untuk highlight */
+}
+
+.brand-wrap {
+  white-space: normal !important;
+  line-height: 1.2;
+}
+
+.brand-logo {
+  height: 70px !important;
+  max-height: none !important;
+  width: auto;
+}
+
+.no-border {
+  border: 0px !important;
+}
+
+/* Default: footer full width di semua layar */
+footer {
+  margin-left: 0;
+}
+
+/* Untuk layar >= 768px (tablet ke atas) */
+@media (min-width: 768px) {
+  footer {
+    margin-left: 250px;
+    /* selebar sidebar */
+  }
+}
+
+.table-wrapper {
+  overflow-x: visible;
+}
+
+@media (max-width: 767px) {
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .table-wrapper table {
+    min-width: 600px;
+    /* opsional, biar scroll muncul kalau tabel lebar */
+  }
+}
