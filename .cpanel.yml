@@ -1,0 +1,19 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/cbtsmpam/qrhadir.my.id
+
+    # backup helper production (jika ada)
+    - /bin/cp $DEPLOYPATH/app/Helpers/pathHelper.php /tmp/pathHelper.php 2>/dev/null || true
+
+    # core application code
+    - /bin/cp -R app $DEPLOYPATH/
+    - /bin/cp -R bootstrap $DEPLOYPATH/
+    - /bin/cp -R resources $DEPLOYPATH/
+    - /bin/cp -R routes $DEPLOYPATH/
+
+    # restore helper production
+    - /bin/mv /tmp/pathHelper.php $DEPLOYPATH/app/Helpers/pathHelper.php 2>/dev/null || true
+
+    # root files
+    - /bin/cp artisan composer.json composer.lock $DEPLOYPATH/ 2>/dev/null || true
