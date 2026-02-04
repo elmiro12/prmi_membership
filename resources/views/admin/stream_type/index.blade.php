@@ -108,7 +108,6 @@
 <script>
     $(document).ready(function () {
 
-
 @if(session('success'))
     Swal.fire({
         icon: 'success',
