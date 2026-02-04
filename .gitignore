@@ -21,6 +21,7 @@
 /vendor
 Homestead.json
 Homestead.yaml
+/app/Helpers/pathHelper.php
 
 # User Uploads
 /public/uploads/*
