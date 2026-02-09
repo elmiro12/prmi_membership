@@ -1,61 +1,104 @@
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Sistem Manajemen Keanggotaan & Streaming Klub
 
-## About Laravel
+Aplikasi berbasis web yang dibangun menggunakan **Laravel** untuk mengelola keanggotaan klub, jadwal pertandingan, dan layanan streaming berbayar. Sistem ini dirancang untuk memudahkan administrasi klub dalam mengelola anggota, pembayaran, dan konten eksklusif.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Fitur Utama
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 1. Manajemen Keanggotaan (Membership)
+- **Registrasi & Verifikasi**: Pengguna dapat mendaftar dan melakukan verifikasi akun.
+- **Kartu Anggota Digital**: Pembuatan dan unduh kartu anggota otomatis.
+- **Tipe Keanggotaan**: Pengelolaan berbagai jenis keanggotaan.
+- **Perpanjangan (Extension)**: Formulir perpanjangan masa aktif keanggotaan.
+- **Ekspor Data**: Ekspor data anggota ke format PDF dan Excel.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 2. Manajemen Pertandingan (Fixtures) & Klub
+- **Jadwal Pertandingan**: Admin dapat mengelola jadwal pertandingan klub.
+- **Data Klub**: Pengelolaan data klub lawan dan detail pertandingan.
+- **Akses Streaming**: Anggota dengan langganan aktif dapat menonton pertandingan secara langsung atau on-demand.
 
-## Learning Laravel
+### 3. Layanan Streaming & Langganan
+- **Paket Streaming**: Pilihan paket langganan untuk akses konten streaming.
+- **Verifikasi Pembayaran**: Sistem verifikasi bukti pembayaran manual atau otomatis (tergantung konfigurasi).
+- **Pembatasan Akses**: Middleware untuk memastikan hanya pengguna yang berlangganan yang dapat mengakses konten tertentu.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 4. Laporan & Keuangan
+- **Laporan Pendapatan**: Rekapitulasi pendapatan dari pendaftaran dan langganan.
+- **Laporan Keanggotaan**: Statistik pertumbuhan anggota.
+- **Ekspor Laporan**: Fitur unduh laporan dalam format PDF dan Ecxel.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 5. Role & Hak Akses
+Aplikasi ini memiliki beberapa role pengguna:
+- **Super Admin**: Akses penuh ke seluruh sistem, termasuk manajemen admin.
+- **Admin**: Mengelola anggota, konten, dan laporan.
+- **Member**: Mengakses dashboard member, riwayat pembayaran, dan konten streaming.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 6. Fitur Tambahan
+- **Pengumuman**: Sistem pengumuman untuk member.
+- **Merchandise**: Katalog dan manajemen merchandise klub.
+- **Manajemen User**: Reset password dan update email pengguna oleh admin.
 
-## Laravel Sponsors
+## 🛠️ Teknologi yang Digunakan
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **Backend Framework**: [Laravel](https://laravel.com)
+- **Frontend**: Blade Templates dengan [Tailwind CSS](https://tailwindcss.com)
+- **Database**: MySQL
+- **Build Tool**: Vite
+- **Libraries Utama**:
+    - `spatie/laravel-permission` (Manajemen Role)
+    - `barryvdh/laravel-dompdf` (Generate PDF)
+    - `maatwebsite/excel` (Ekspor Excel)
 
-### Premium Partners
+## ⚙️ Instalasi
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lokal komputer Anda:
 
-## Contributing
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/username/repository-anda.git
+   cd repository-anda
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. **Install Dependencies**
+   Pastikan Anda telah menginstal PHP dan Composer.
+   ```bash
+   composer install
+   npm install
+   ```
 
-## Code of Conduct
+3. **Konfigurasi Environment**
+   Salin file `.env.example` menjadi `.env` dan sesuaikan konfigurasi database Anda.
+   ```bash
+   cp .env.example .env
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4. **Generate Application Key**
+   ```bash
+   php artisan key:generate
+   ```
 
-## Security Vulnerabilities
+5. **Migrasi Database**
+   Jalankan migrasi untuk membuat tabel database.
+   ```bash
+   php artisan migrate
+   ```
+   *(Opsional) Jika ada seeder:*
+   ```bash
+   php artisan db:seed
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. **Jalankan Aplikasi**
+   Jalankan server lokal Laravel dan Vite secara bersamaan.
+   ```bash
+   php artisan serve
+   npm run dev
+   ```
 
-## License
+7. **Akses Aplikasi**
+   Buka browser dan kunjungi `http://localhost:8000`.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📄 Lisensi
+
+Aplikasi ini bersifat open-source dan dilisensikan di bawah [MIT license](https://opensource.org/licenses/MIT).
